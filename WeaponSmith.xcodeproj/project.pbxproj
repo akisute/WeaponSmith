@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E6DD3F0191E1E3E00D4A0D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6DD3EF191E1E3E00D4A0D8 /* Foundation.framework */; };
+		0E6DD3F2191E1E3E00D4A0D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6DD3F1191E1E3E00D4A0D8 /* CoreGraphics.framework */; };
+		0E6DD3F4191E1E3E00D4A0D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6DD3F3191E1E3E00D4A0D8 /* UIKit.framework */; };
+		0E6DD3FA191E1E3E00D4A0D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E6DD3F8191E1E3E00D4A0D8 /* InfoPlist.strings */; };
+		0E6DD3FC191E1E3E00D4A0D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DD3FB191E1E3E00D4A0D8 /* main.m */; };
+		0E6DD400191E1E3E00D4A0D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DD3FF191E1E3E00D4A0D8 /* AppDelegate.m */; };
+		0E6DD402191E1E3E00D4A0D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6DD401191E1E3E00D4A0D8 /* Images.xcassets */; };
+		0E6DD409191E1E3E00D4A0D8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6DD408191E1E3E00D4A0D8 /* XCTest.framework */; };
+		0E6DD40A191E1E3E00D4A0D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6DD3EF191E1E3E00D4A0D8 /* Foundation.framework */; };
+		0E6DD40B191E1E3E00D4A0D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6DD3F3191E1E3E00D4A0D8 /* UIKit.framework */; };
+		0E6DD413191E1E3E00D4A0D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E6DD411191E1E3E00D4A0D8 /* InfoPlist.strings */; };
+		0E6DD415191E1E3E00D4A0D8 /* WeaponSmithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DD414191E1E3E00D4A0D8 /* WeaponSmithTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E6DD40C191E1E3E00D4A0D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E6DD3E4191E1E3E00D4A0D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E6DD3EB191E1E3E00D4A0D8;
+			remoteInfo = WeaponSmith;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E6DD3EC191E1E3E00D4A0D8 /* WeaponSmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeaponSmith.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6DD3EF191E1E3E00D4A0D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0E6DD3F1191E1E3E00D4A0D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0E6DD3F3191E1E3E00D4A0D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0E6DD3F7191E1E3E00D4A0D8 /* WeaponSmith-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeaponSmith-Info.plist"; sourceTree = "<group>"; };
+		0E6DD3F9191E1E3E00D4A0D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0E6DD3FB191E1E3E00D4A0D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0E6DD3FD191E1E3E00D4A0D8 /* WeaponSmith-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeaponSmith-Prefix.pch"; sourceTree = "<group>"; };
+		0E6DD3FE191E1E3E00D4A0D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0E6DD3FF191E1E3E00D4A0D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0E6DD401191E1E3E00D4A0D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0E6DD407191E1E3E00D4A0D8 /* WeaponSmithTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeaponSmithTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6DD408191E1E3E00D4A0D8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0E6DD410191E1E3E00D4A0D8 /* WeaponSmithTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeaponSmithTests-Info.plist"; sourceTree = "<group>"; };
+		0E6DD412191E1E3E00D4A0D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0E6DD414191E1E3E00D4A0D8 /* WeaponSmithTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeaponSmithTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E6DD3E9191E1E3E00D4A0D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6DD3F2191E1E3E00D4A0D8 /* CoreGraphics.framework in Frameworks */,
+				0E6DD3F4191E1E3E00D4A0D8 /* UIKit.framework in Frameworks */,
+				0E6DD3F0191E1E3E00D4A0D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6DD404191E1E3E00D4A0D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6DD409191E1E3E00D4A0D8 /* XCTest.framework in Frameworks */,
+				0E6DD40B191E1E3E00D4A0D8 /* UIKit.framework in Frameworks */,
+				0E6DD40A191E1E3E00D4A0D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E6DD3E3191E1E3E00D4A0D8 = {
+			isa = PBXGroup;
+			children = (
+				0E6DD3F5191E1E3E00D4A0D8 /* WeaponSmith */,
+				0E6DD40E191E1E3E00D4A0D8 /* WeaponSmithTests */,
+				0E6DD3EE191E1E3E00D4A0D8 /* Frameworks */,
+				0E6DD3ED191E1E3E00D4A0D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0E6DD3ED191E1E3E00D4A0D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E6DD3EC191E1E3E00D4A0D8 /* WeaponSmith.app */,
+				0E6DD407191E1E3E00D4A0D8 /* WeaponSmithTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E6DD3EE191E1E3E00D4A0D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E6DD3EF191E1E3E00D4A0D8 /* Foundation.framework */,
+				0E6DD3F1191E1E3E00D4A0D8 /* CoreGraphics.framework */,
+				0E6DD3F3191E1E3E00D4A0D8 /* UIKit.framework */,
+				0E6DD408191E1E3E00D4A0D8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0E6DD3F5191E1E3E00D4A0D8 /* WeaponSmith */ = {
+			isa = PBXGroup;
+			children = (
+				0E6DD3FE191E1E3E00D4A0D8 /* AppDelegate.h */,
+				0E6DD3FF191E1E3E00D4A0D8 /* AppDelegate.m */,
+				0E6DD401191E1E3E00D4A0D8 /* Images.xcassets */,
+				0E6DD3F6191E1E3E00D4A0D8 /* Supporting Files */,
+			);
+			path = WeaponSmith;
+			sourceTree = "<group>";
+		};
+		0E6DD3F6191E1E3E00D4A0D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E6DD3F7191E1E3E00D4A0D8 /* WeaponSmith-Info.plist */,
+				0E6DD3F8191E1E3E00D4A0D8 /* InfoPlist.strings */,
+				0E6DD3FB191E1E3E00D4A0D8 /* main.m */,
+				0E6DD3FD191E1E3E00D4A0D8 /* WeaponSmith-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E6DD40E191E1E3E00D4A0D8 /* WeaponSmithTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E6DD414191E1E3E00D4A0D8 /* WeaponSmithTests.m */,
+				0E6DD40F191E1E3E00D4A0D8 /* Supporting Files */,
+			);
+			path = WeaponSmithTests;
+			sourceTree = "<group>";
+		};
+		0E6DD40F191E1E3E00D4A0D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E6DD410191E1E3E00D4A0D8 /* WeaponSmithTests-Info.plist */,
+				0E6DD411191E1E3E00D4A0D8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E6DD3EB191E1E3E00D4A0D8 /* WeaponSmith */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E6DD418191E1E3E00D4A0D8 /* Build configuration list for PBXNativeTarget "WeaponSmith" */;
+			buildPhases = (
+				0E6DD3E8191E1E3E00D4A0D8 /* Sources */,
+				0E6DD3E9191E1E3E00D4A0D8 /* Frameworks */,
+				0E6DD3EA191E1E3E00D4A0D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeaponSmith;
+			productName = WeaponSmith;
+			productReference = 0E6DD3EC191E1E3E00D4A0D8 /* WeaponSmith.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0E6DD406191E1E3E00D4A0D8 /* WeaponSmithTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E6DD41B191E1E3E00D4A0D8 /* Build configuration list for PBXNativeTarget "WeaponSmithTests" */;
+			buildPhases = (
+				0E6DD403191E1E3E00D4A0D8 /* Sources */,
+				0E6DD404191E1E3E00D4A0D8 /* Frameworks */,
+				0E6DD405191E1E3E00D4A0D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E6DD40D191E1E3E00D4A0D8 /* PBXTargetDependency */,
+			);
+			name = WeaponSmithTests;
+			productName = WeaponSmithTests;
+			productReference = 0E6DD407191E1E3E00D4A0D8 /* WeaponSmithTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E6DD3E4191E1E3E00D4A0D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = akisute;
+				TargetAttributes = {
+					0E6DD406191E1E3E00D4A0D8 = {
+						TestTargetID = 0E6DD3EB191E1E3E00D4A0D8;
+					};
+				};
+			};
+			buildConfigurationList = 0E6DD3E7191E1E3E00D4A0D8 /* Build configuration list for PBXProject "WeaponSmith" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0E6DD3E3191E1E3E00D4A0D8;
+			productRefGroup = 0E6DD3ED191E1E3E00D4A0D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E6DD3EB191E1E3E00D4A0D8 /* WeaponSmith */,
+				0E6DD406191E1E3E00D4A0D8 /* WeaponSmithTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E6DD3EA191E1E3E00D4A0D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6DD3FA191E1E3E00D4A0D8 /* InfoPlist.strings in Resources */,
+				0E6DD402191E1E3E00D4A0D8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6DD405191E1E3E00D4A0D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6DD413191E1E3E00D4A0D8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E6DD3E8191E1E3E00D4A0D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6DD400191E1E3E00D4A0D8 /* AppDelegate.m in Sources */,
+				0E6DD3FC191E1E3E00D4A0D8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6DD403191E1E3E00D4A0D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6DD415191E1E3E00D4A0D8 /* WeaponSmithTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E6DD40D191E1E3E00D4A0D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E6DD3EB191E1E3E00D4A0D8 /* WeaponSmith */;
+			targetProxy = 0E6DD40C191E1E3E00D4A0D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0E6DD3F8191E1E3E00D4A0D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E6DD3F9191E1E3E00D4A0D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0E6DD411191E1E3E00D4A0D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E6DD412191E1E3E00D4A0D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0E6DD416191E1E3E00D4A0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0E6DD417191E1E3E00D4A0D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E6DD419191E1E3E00D4A0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeaponSmith/WeaponSmith-Prefix.pch";
+				INFOPLIST_FILE = "WeaponSmith/WeaponSmith-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0E6DD41A191E1E3E00D4A0D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeaponSmith/WeaponSmith-Prefix.pch";
+				INFOPLIST_FILE = "WeaponSmith/WeaponSmith-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0E6DD41C191E1E3E00D4A0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WeaponSmith.app/WeaponSmith";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeaponSmith/WeaponSmith-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WeaponSmithTests/WeaponSmithTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0E6DD41D191E1E3E00D4A0D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WeaponSmith.app/WeaponSmith";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeaponSmith/WeaponSmith-Prefix.pch";
+				INFOPLIST_FILE = "WeaponSmithTests/WeaponSmithTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E6DD3E7191E1E3E00D4A0D8 /* Build configuration list for PBXProject "WeaponSmith" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6DD416191E1E3E00D4A0D8 /* Debug */,
+				0E6DD417191E1E3E00D4A0D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E6DD418191E1E3E00D4A0D8 /* Build configuration list for PBXNativeTarget "WeaponSmith" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6DD419191E1E3E00D4A0D8 /* Debug */,
+				0E6DD41A191E1E3E00D4A0D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0E6DD41B191E1E3E00D4A0D8 /* Build configuration list for PBXNativeTarget "WeaponSmithTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6DD41C191E1E3E00D4A0D8 /* Debug */,
+				0E6DD41D191E1E3E00D4A0D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E6DD3E4191E1E3E00D4A0D8 /* Project object */;
+}

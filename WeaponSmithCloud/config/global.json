@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "WeaponSmith": {
+            "applicationId": "bSd79gbuQxsyvL1mEF16i9EB58fxr9wQJmLleSG5", 
+            "masterKey": "5NJMtURlGBZCdxl4jBOM76Cs1ztoQR4f6dSvQZ1K"
+        }, 
+        "_default": {
+            "link": "WeaponSmith"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.18"
+    }
+}
