@@ -2,6 +2,7 @@ require("cloud/app.js");
 
 var Promise = require("cloud/libs/promise.js");
 var _ = require("underscore");
+_.str = require("cloud/libs/underscore.string.min.js");
 
 var models_weapon = require("cloud/models/weapon.js");
 var models_affix = require("cloud/models/affix.js");

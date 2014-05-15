@@ -10,6 +10,8 @@ html
     script(src='js/jquery-2.1.1.min.js')
     script(src='js/bootstrap.min.js')
     script(src='js/promise.js')
+    script(src='js/underscore.min.js')
+    script(src='js/underscore.string.min.js')
     script(src='js/api.js')
     title WeaponSmith
   body
@@ -19,14 +21,24 @@ html
             h1 WeaponSmith
         section#content
             p#message.well= message
-            button#get_new_weapon(name='get_new_weapon').btn.btn-primary.btn-lg Get New Weapon
+            button#get-new-weapon.btn.btn-primary.btn-lg(data-loading-text="Forging New Weapon...") Forge a New Weapon!
     footer.sticky-footer
       .container
         p.text-muted Created by akisute.
     script.
       $(function() {
-        $("#get_new_weapon").click(function() {
-          api_get_new_weapon();
+        $("#get-new-weapon").click(function() {
+          var $button = $(this);
+          $button.button("loading");
+          getNewWeaponAsync()
+          .then(function (weapon) {
+            $("#message").text(_.str.sprintf("You got a new weapon: %s", weapon.nameEn));
+            $button.button("reset");
+          })
+          .catch(function (error) {
+            $("#message").text(_.str.sprintf("Error! %s", error.message));
+            $button.button("reset");
+          });
         });
       });
       
