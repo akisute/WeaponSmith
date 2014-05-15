@@ -2,11 +2,21 @@ doctype html
 html
   head
     title WeaponSmith
+    script(src='js/jquery-2.1.1.min.js')
+    script(src='js/promise.js')
+    script(src='js/api.js')
   body
     header
       h1 WeaponSmith
     section#content
-      p= message
-      p TODO: add a dynamic form here
+      p#message= message
+      button#get_new_weapon(name='get_new_weapon') Get New Weapon
     footer
       p Created by akisute
+    script.
+      $(function() {
+        $("#get_new_weapon").click(function() {
+          api_get_new_weapon();
+        });
+      });
+      
