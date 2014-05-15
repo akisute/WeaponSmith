@@ -1,3 +1,5 @@
+"use strict";
+
 var Promise = require("cloud/libs/promise.js");
 
 exports.allAsync = function() {
