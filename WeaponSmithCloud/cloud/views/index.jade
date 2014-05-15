@@ -1,18 +1,28 @@
 doctype html
 html
   head
-    title WeaponSmith
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='css/bootstrap-theme.min.css')
+    link(rel='stylesheet', type='text/css', href='css/sticky-footer.css')
+    link(rel='stylesheet', type='text/css', href='css/style.css')
     script(src='js/jquery-2.1.1.min.js')
+    script(src='js/bootstrap.min.js')
     script(src='js/promise.js')
     script(src='js/api.js')
+    title WeaponSmith
   body
-    header
-      h1 WeaponSmith
-    section#content
-      p#message= message
-      button#get_new_weapon(name='get_new_weapon') Get New Weapon
-    footer
-      p Created by akisute
+    section.page
+      .container
+        header.page-header
+            h1 WeaponSmith
+        section#content
+            p#message.well= message
+            button#get_new_weapon(name='get_new_weapon').btn.btn-primary.btn-lg Get New Weapon
+    footer.sticky-footer
+      .container
+        p.text-muted Created by akisute.
     script.
       $(function() {
         $("#get_new_weapon").click(function() {
