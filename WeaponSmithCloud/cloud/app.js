@@ -1,6 +1,3 @@
-var Promise = require("cloud/libs/promise.js");
-var _ = require("underscore");
-
 var express = require('express');
 var app = express();
 
