@@ -18,9 +18,18 @@ html
     section.page
       .container
         header.page-header
-            h1 WeaponSmith
+          h1 WeaponSmith
         section#content
-            p#message.well= message
+          .well
+            p#message Welcome to WeaponForge.
+            #weapon-detail(hidden="hidden")
+              dl.dl-horizontal
+                dt English Name
+                dd.nameEn
+                dt Kana Name
+                dd.nameKana
+                dt Kanji Name
+                dd.nameKanji
             button#get-new-weapon.btn.btn-primary.btn-lg(data-loading-text="Forging New Weapon...") Forge a New Weapon!
     footer.sticky-footer
       .container
@@ -32,11 +41,16 @@ html
           $button.button("loading");
           getNewWeaponAsync()
           .then(function (weapon) {
-            $("#message").text(_.str.sprintf("You got a new weapon: %s", weapon.nameEn));
+            $("#message").text(_.str.sprintf("You got a new weapon!"));
+            $("#weapon-detail").prop("hidden", false);
+            $("#weapon-detail .nameEn").text(weapon.nameEn);
+            $("#weapon-detail .nameKana").text(weapon.nameKana);
+            $("#weapon-detail .nameKanji").text(weapon.nameKanji);
             $button.button("reset");
           })
           .catch(function (error) {
             $("#message").text(_.str.sprintf("Error! %s", error.message));
+            $("#weapon-detail").prop("hidden", true);
             $button.button("reset");
           });
         });

@@ -1,6 +1,7 @@
 /*
  requires: jQuery 2.1.1, Promise.js(ypromise) in grobal scope
 */
+"use strict";
 
 function getNewWeaponAsync() {
   return new Promise(function (resolve, reject) {
