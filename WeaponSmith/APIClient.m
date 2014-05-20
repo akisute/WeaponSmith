@@ -35,11 +35,29 @@
 
 #pragma mark - Private
 
+- (BFTask *)parseResponseDataAsync:(NSData *)responseData
+{
+    if (responseData.length == 0) {
+        return [BFTask taskWithResult:nil];
+    }
+    NSError *jsonError = nil;
+    NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
+    if (jsonError) {
+        return [BFTask taskWithError:jsonError];
+    }
+    if (jsonObject[@"error"]) {
+        return [BFTask taskWithError:[NSError errorWithDomain:@"ParseErrorDomain"
+                                                         code:[jsonObject[@"code"] integerValue]
+                                                     userInfo:@{NSLocalizedDescriptionKey: jsonObject[@"error"]}]];
+    }
+    return [BFTask taskWithResult:jsonObject];
+}
+
 #pragma mark - API
 
 - (BFTask *)getNewWeaponAsync
 {
-    BFTaskCompletionSource *task = [BFTaskCompletionSource taskCompletionSource];
+    BFTaskCompletionSource *promise = [BFTaskCompletionSource taskCompletionSource];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.parse.com/1/functions/get_new_weapon"]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:15.0];
@@ -52,34 +70,37 @@
                                        queue:self.operationQueue
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                if (connectionError) {
-                                   [task setError:connectionError];
-                               } else {
-                                   NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-                                   if (httpResponse.statusCode < 200 || httpResponse.statusCode >= 300) {
-                                       NSError *httpError = [NSError errorWithDomain:@"NSHTTPErrorDomain"
-                                                                                code:httpResponse.statusCode
-                                                                            userInfo:@{NSLocalizedDescriptionKey: [NSHTTPURLResponse localizedStringForStatusCode:httpResponse.statusCode]}];
-                                       [task setError:httpError];
-                                       return;
-                                   }
-                                   NSError *jsonError = nil;
-                                   NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-                                   if (jsonError) {
-                                       [task setError:jsonError];
-                                       return;
-                                   }
-                                   if (jsonObject[@"error"]) {
-                                       NSError *parseError = [NSError errorWithDomain:@"ParseErrorDomain"
-                                                                                 code:[jsonObject[@"code"] integerValue]
-                                                                             userInfo:@{NSLocalizedDescriptionKey: jsonObject[@"error"]}];
-                                       [task setError:parseError];
-                                       return;
-                                   }
-                                   [task setResult:jsonObject];
+                                   [promise setError:connectionError];
                                    return;
                                }
+                               
+                               NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+                               if (httpResponse.statusCode < 200 || httpResponse.statusCode >= 300) {
+                                   [[self parseResponseDataAsync:data] continueWithBlock:^id(BFTask *task) {
+                                       NSMutableDictionary *httpErrorInfo = [NSMutableDictionary dictionary];
+                                       httpErrorInfo[NSLocalizedDescriptionKey] = [NSHTTPURLResponse localizedStringForStatusCode:httpResponse.statusCode];
+                                       if (task.error) {
+                                           httpErrorInfo[NSUnderlyingErrorKey] = task.error;
+                                       }
+                                       [promise setError:[NSError errorWithDomain:@"NSHTTPErrorDomain"
+                                                                             code:httpResponse.statusCode
+                                                                         userInfo:httpErrorInfo]];
+                                       return nil;
+                                   }];
+                                   return;
+                               }
+                               
+                               [[self parseResponseDataAsync:data] continueWithBlock:^id(BFTask *task) {
+                                   if (task.error) {
+                                       [promise setError:task.error];
+                                       return nil;
+                                   }
+                                   [promise setResult:task.result];
+                                   return nil;
+                               }];
+                               return;
                            }];
-    return task.task;
+    return promise.task;
 }
 
 @end
