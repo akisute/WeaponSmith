@@ -20,6 +20,8 @@
 		0E6DD413191E1E3E00D4A0D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E6DD411191E1E3E00D4A0D8 /* InfoPlist.strings */; };
 		0E6DD415191E1E3E00D4A0D8 /* WeaponSmithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DD414191E1E3E00D4A0D8 /* WeaponSmithTests.m */; };
 		C58BF665192B24C000581379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58BF664192B24C000581379 /* Main.storyboard */; };
+		C58BF668192B258500581379 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C58BF667192B258500581379 /* APIClient.m */; };
+		C58BF66B192B335200581379 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58BF66A192B335200581379 /* MainViewController.m */; };
 		DF8B1F310AA34DF5B1C04575 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D901AC01E674F10B3ED97B8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,10 @@
 		5D901AC01E674F10B3ED97B8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		87C952BF02A74B309429DF1E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C58BF664192B24C000581379 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C58BF666192B258500581379 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		C58BF667192B258500581379 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		C58BF669192B335200581379 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		C58BF66A192B335200581379 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,10 @@
 			children = (
 				0E6DD3FE191E1E3E00D4A0D8 /* AppDelegate.h */,
 				0E6DD3FF191E1E3E00D4A0D8 /* AppDelegate.m */,
+				C58BF666192B258500581379 /* APIClient.h */,
+				C58BF667192B258500581379 /* APIClient.m */,
+				C58BF669192B335200581379 /* MainViewController.h */,
+				C58BF66A192B335200581379 /* MainViewController.m */,
 				C58BF664192B24C000581379 /* Main.storyboard */,
 				0E6DD401191E1E3E00D4A0D8 /* Images.xcassets */,
 				0E6DD3F6191E1E3E00D4A0D8 /* Supporting Files */,
@@ -285,7 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E6DD400191E1E3E00D4A0D8 /* AppDelegate.m in Sources */,
+				C58BF668192B258500581379 /* APIClient.m in Sources */,
 				0E6DD3FC191E1E3E00D4A0D8 /* main.m in Sources */,
+				C58BF66B192B335200581379 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
