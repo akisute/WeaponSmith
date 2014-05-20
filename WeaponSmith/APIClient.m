@@ -33,6 +33,10 @@
     return self;
 }
 
+#pragma mark - Private
+
+#pragma mark - API
+
 - (BFTask *)getNewWeaponAsync
 {
     BFTaskCompletionSource *task = [BFTaskCompletionSource taskCompletionSource];
@@ -50,13 +54,29 @@
                                if (connectionError) {
                                    [task setError:connectionError];
                                } else {
+                                   NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+                                   if (httpResponse.statusCode < 200 || httpResponse.statusCode >= 300) {
+                                       NSError *httpError = [NSError errorWithDomain:@"NSHTTPErrorDomain"
+                                                                                code:httpResponse.statusCode
+                                                                            userInfo:@{NSLocalizedDescriptionKey: [NSHTTPURLResponse localizedStringForStatusCode:httpResponse.statusCode]}];
+                                       [task setError:httpError];
+                                       return;
+                                   }
                                    NSError *jsonError = nil;
-                                   id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+                                   NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
                                    if (jsonError) {
                                        [task setError:jsonError];
-                                   } else {
-                                       [task setResult:jsonObject];
+                                       return;
                                    }
+                                   if (jsonObject[@"error"]) {
+                                       NSError *parseError = [NSError errorWithDomain:@"ParseErrorDomain"
+                                                                                 code:[jsonObject[@"code"] integerValue]
+                                                                             userInfo:@{NSLocalizedDescriptionKey: jsonObject[@"error"]}];
+                                       [task setError:parseError];
+                                       return;
+                                   }
+                                   [task setResult:jsonObject];
+                                   return;
                                }
                            }];
     return task.task;
